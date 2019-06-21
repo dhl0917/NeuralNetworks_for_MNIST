@@ -1,6 +1,6 @@
 # Neural Networks for MNIST
 
-MNIST is the simplest data set and the very first data set to learn neural networks. Here two classical models and their corresponding trained weights are uploaded. 
+MNIST is the simplest data set and the very first data set to learn neural networks. Here two classical models implemented in Pytorch and their corresponding trained weights are uploaded. 
 
 - Multi-perceptron neural networks
 
