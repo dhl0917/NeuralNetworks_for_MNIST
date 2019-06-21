@@ -88,14 +88,14 @@ testloader = torch.utils.data.DataLoader(
 
 model = Net().to(device)
 optimizer = optim.SGD(model.parameters(), lr=0.0001, momentum=0.5)
-model.load_state_dict(torch.load('mnist_LeNet.pkl', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('LeNet_MNIST_params.pkl', map_location=torch.device('cpu')))
 
 
 # Train
-# for epoch in range(1, epochs_upper_bound + 1):
-#         train(model, device, trainloader, optimizer, epoch)
-#         test(model, device, testloader)
-# torch.save(model.state_dict(),"mnist_LeNet.pkl")
+for epoch in range(1, epochs_upper_bound + 1):
+        train(model, device, trainloader, optimizer, epoch)
+        test(model, device, testloader)
+torch.save(model.state_dict(),"LeNet_MNIST_params.pkl")
 
 # Test
 test(model,device,testloader)
